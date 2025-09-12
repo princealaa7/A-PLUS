@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A PLUS - تطبيق تعلم اللغة الإنجليزية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+            background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364);
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #22d3ee, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-gradient {
+            background-image: linear-gradient(to right, #22d3ee, #a855f7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-gradient:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(34, 211, 238, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-6">
+        
+        <!-- Header -->
+        <header class="w-full max-w-4xl text-center py-10">
+            <h1 class="text-6xl font-extrabold text-white leading-tight mb-4">
+                <span class="text-gradient">A PLUS</span>
+            </h1>
+            <p class="text-xl text-gray-300">
+                استعد لخوض تجربة تعليمية فريدة في مادة اللغة الإنجليزية، بطريقة ذكية، ممتعة وتفاعلية مع روبوتك المساعد
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="w-full max-w-4xl bg-gray-800 bg-opacity-70 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-700 flex flex-col lg:flex-row items-center">
+            
+            <section class="mb-12 lg:mb-0 lg:w-full text-center lg:text-right lg:pl-8">
+                <h2 class="text-4xl font-bold mb-4 text-white">لتعلم مادة اللغة الانجليزية</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
+                    A PLUS ليس مجرد تطبيق، بل هو رفيقك الذكي في رحلة التعلم. يوفر لك دروسًا منظمة، واختبارات تفاعلية، ومساعدًا آليًا لتصحيح أخطائك، كل ذلك في بيئة تعليمية ممتعة وجذابة.
+                </p>
+            </section>
+            
+        </main>
+
+        <section class="w-full max-w-4xl py-8">
+            <!-- Payment Section -->
+            <section class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4 text-white">احصل على النسخة الكاملة!</h3>
+                <div class="bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-inner border border-gray-600 max-w-md mx-auto">
+                    <p class="text-xl font-semibold mb-2 text-gray-200">
+                        سعر الاشتراك السنوي:
+                    </p>
+                    <p class="text-5xl font-extrabold text-gradient">
+                        120,000 IQD
+                    </p>
+                    <p class="text-sm text-gray-400 mt-1">
+                        (مائة وعشرون ألف دينار عراقي)
+                    </p>
+                    <a href="https://wa.me/+9647879666830" target="_blank" class="mt-6 w-full btn-gradient text-black font-bold py-4 px-6 rounded-xl shadow-lg text-lg inline-block">
+                        اشتري الكود
+                    </a>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <a href="https://t.me/+qkbZbGXKYD8yZjYy" target="_blank" class="btn-gradient text-black font-bold py-4 px-6 rounded-xl shadow-lg flex items-center justify-center">
+                    <span class="text-base md:text-lg">قناتنا التلكرام</span>
+                </a>
+                <a href="https://wa.me/+9647879666830" target="_blank" class="btn-gradient text-black font-bold py-4 px-6 rounded-xl shadow-lg flex items-center justify-center">
+                    <span class="text-base md:text-lg">تواصل مع الأستاذ</span>
+                </a>
+                <a href="https://www.instagram.com/learning81515" target="_blank" class="btn-gradient text-black font-bold py-4 px-6 rounded-xl shadow-lg flex items-center justify-center">
+                    <span class="text-base md:text-lg">Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@aplusiraq?_t=ZS-8zWa908kOYf&_r=1" target="_blank" class="btn-gradient text-black font-bold py-4 px-6 rounded-xl shadow-lg flex items-center justify-center">
+                    <span class="text-base md:text-lg">TikTok</span>
+                </a>
+            </section>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-4xl text-center py-6 mt-12">
+            <p class="text-gray-400 text-sm">
+                جميع الحقوق محفوظة © 2025 A PLUS
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
