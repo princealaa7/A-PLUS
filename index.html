@@ -47,6 +47,20 @@
       background: rgba(255,255,255,0.08);
       transform: translateY(-8px);
     }
+    .download-info {
+      background: rgba(255,255,255,0.03);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
 <body class="antialiased">
@@ -78,7 +92,7 @@
       <a href="#pricing" class="gradient-btn text-white py-3 px-8 rounded-full font-bold text-lg">
         <i class="fas fa-shopping-cart ml-2"></i> مكان الشراء
       </a>
-      <a href="#download" class="apk-btn text-white py-3 px-8 rounded-full font-bold text-lg">
+      <a href="#download" class="apk-btn text-white py-3 px-8 rounded-full font-bold text-lg pulse">
         <i class="fas fa-download ml-2"></i> تحميل التطبيق
       </a>
     </div>
@@ -157,12 +171,13 @@
   <section id="download" class="max-w-5xl mx-auto py-20 px-6 text-center">
     <h3 class="text-4xl font-bold mb-10">تحميل التطبيق</h3>
     <p class="text-gray-400 mb-8">يمكنك تحميل التطبيق مباشرة الآن أو الانتظار لرفعه على المتاجر</p>
+    
     <div class="flex flex-wrap gap-6 justify-center">
       <!-- رابط تحميل APK - استبدل الرابط برابط ملفك -->
-      <a href="رابط_ملف_APK_الخاص_بك.apk" download 
-         class="apk-btn flex items-center gap-3 text-white py-3 px-6 rounded-xl font-bold">
+      <a href="https://example.com/path/to/your/app.apk" download="A_PLUS_App.apk" 
+         class="apk-btn flex items-center gap-3 text-white py-4 px-8 rounded-xl font-bold text-lg">
         <i class="fas fa-download text-2xl"></i>
-        <span>تحميل APK مباشر</span>
+        <span>تحميل مباشر (APK)</span>
       </a>
       
       <button onclick="alert('التطبيق سيكون متاح قريباً على Google Play')" 
@@ -170,18 +185,47 @@
         <i class="fab fa-google-play text-2xl text-green-400"></i>
         <span class="font-bold">Google Play</span>
       </button>
+      
       <button onclick="alert('التطبيق سيكون متاح قريباً على App Store')" 
               class="flex items-center gap-3 border border-gray-500 py-3 px-6 rounded-xl hover:bg-gray-800">
         <i class="fab fa-apple text-2xl text-white"></i>
         <span class="font-bold">App Store</span>
       </button>
     </div>
-    <div class="mt-8 p-4 bg-slate-800 rounded-lg max-w-md mx-auto">
-      <h4 class="font-bold text-cyan-400 mb-2">تعليمات التثبيت:</h4>
-      <p class="text-sm text-gray-300">
-        1. بعد التحميل، اضغط على ملف APK<br>
-        2. قد تحتاج إلى تفعيل "التثبيت من مصادر غير معروفة"<br>
-        3. اتبع التعليمات الظاهرة على الشاشة
+    
+    <div class="download-info mt-10">
+      <h4 class="font-bold text-cyan-400 text-xl mb-4">معلومات التحميل:</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-right">
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <i class="fas fa-weight-hanging text-blue-400 text-2xl mb-2"></i>
+          <p class="font-bold">حجم التطبيق</p>
+          <p class="text-gray-300">~45 ميجابايت</p>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <i class="fas fa-code-branch text-green-400 text-2xl mb-2"></i>
+          <p class="font-bold">الإصدار</p>
+          <p class="text-gray-300">1.0.0</p>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <i class="fas fa-calendar-alt text-yellow-400 text-2xl mb-2"></i>
+          <p class="font-bold">آخر تحديث</p>
+          <p class="text-gray-300">15 مارس 2025</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-8 p-6 bg-slate-800 rounded-xl max-w-2xl mx-auto">
+      <h4 class="font-bold text-cyan-400 text-xl mb-3">تعليمات التثبيت:</h4>
+      <ol class="text-right text-gray-300 space-y-2 list-decimal list-inside">
+        <li>اضغط على زر "تحميل مباشر (APK)" أعلاه</li>
+        <li>انتظر اكتمال التحميل (سيبدأ تلقائياً)</li>
+        <li>افتح ملف APK بعد اكتمال التحميل</li>
+        <li>قد تحتاج إلى تفعيل "التثبيت من مصادر غير معروفة" في إعدادات الأمان</li>
+        <li>اتبع التعليمات الظاهرة على الشاشة لإكمال التثبيت</li>
+      </ol>
+      <p class="mt-4 text-sm text-amber-300">
+        <i class="fas fa-exclamation-circle ml-1"></i>
+        تأكد من أنك تقوم بتحميل التطبيق من هذا الموقع الرسمي فقط
       </p>
     </div>
   </section>
@@ -214,6 +258,28 @@
     <h4 class="gradient-text text-2xl font-extrabold mb-2">A PLUS</h4>
     <p>© 2025 جميع الحقوق محفوظة</p>
   </footer>
+
+  <!-- رسالة تأكيد التحميل -->
+  <div id="downloadToast" class="fixed bottom-4 left-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-300 translate-x-[-150%]">
+    <div class="flex items-center">
+      <i class="fas fa-check-circle text-xl ml-2"></i>
+      <p>بدأ التحميل بنجاح!...</p>
+    </div>
+  </div>
+
+  <script>
+    // محاكاة بدء التحميل عند النقر
+    document.querySelector('.apk-btn').addEventListener('click', function() {
+      const toast = document.getElementById('downloadToast');
+      toast.classList.remove('translate-x-[-150%]');
+      toast.classList.add('translate-x-0');
+      
+      setTimeout(function() {
+        toast.classList.remove('translate-x-0');
+        toast.classList.add('translate-x-[-150%]');
+      }, 3000);
+    });
+  </script>
 
 </body>
 </html>
