@@ -28,6 +28,14 @@
       transform: translateY(-3px);
       box-shadow: 0 10px 25px rgba(59,130,246,0.5);
     }
+    .apk-btn {
+      background: linear-gradient(90deg, #10b981, #22c55e);
+      transition: 0.3s ease;
+    }
+    .apk-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(16,185,129,0.5);
+    }
     .card {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
@@ -70,8 +78,8 @@
       <a href="#pricing" class="gradient-btn text-white py-3 px-8 rounded-full font-bold text-lg">
         <i class="fas fa-shopping-cart ml-2"></i> مكان الشراء
       </a>
-      <a href="#features" class="border border-gray-500 py-3 px-8 rounded-full font-bold text-lg hover:bg-gray-800">
-        اكتشف الميزات
+      <a href="#download" class="apk-btn text-white py-3 px-8 rounded-full font-bold text-lg">
+        <i class="fas fa-download ml-2"></i> تحميل التطبيق
       </a>
     </div>
   </header>
@@ -148,8 +156,15 @@
   <!-- التحميل -->
   <section id="download" class="max-w-5xl mx-auto py-20 px-6 text-center">
     <h3 class="text-4xl font-bold mb-10">تحميل التطبيق</h3>
-    <p class="text-gray-400 mb-8">سيتم رفع التطبيق قريباً على المتاجر</p>
+    <p class="text-gray-400 mb-8">يمكنك تحميل التطبيق مباشرة الآن أو الانتظار لرفعه على المتاجر</p>
     <div class="flex flex-wrap gap-6 justify-center">
+      <!-- رابط تحميل APK - استبدل الرابط برابط ملفك -->
+      <a href="رابط_ملف_APK_الخاص_بك.apk" download 
+         class="apk-btn flex items-center gap-3 text-white py-3 px-6 rounded-xl font-bold">
+        <i class="fas fa-download text-2xl"></i>
+        <span>تحميل APK مباشر</span>
+      </a>
+      
       <button onclick="alert('التطبيق سيكون متاح قريباً على Google Play')" 
               class="flex items-center gap-3 border border-gray-500 py-3 px-6 rounded-xl hover:bg-gray-800">
         <i class="fab fa-google-play text-2xl text-green-400"></i>
@@ -160,6 +175,14 @@
         <i class="fab fa-apple text-2xl text-white"></i>
         <span class="font-bold">App Store</span>
       </button>
+    </div>
+    <div class="mt-8 p-4 bg-slate-800 rounded-lg max-w-md mx-auto">
+      <h4 class="font-bold text-cyan-400 mb-2">تعليمات التثبيت:</h4>
+      <p class="text-sm text-gray-300">
+        1. بعد التحميل، اضغط على ملف APK<br>
+        2. قد تحتاج إلى تفعيل "التثبيت من مصادر غير معروفة"<br>
+        3. اتبع التعليمات الظاهرة على الشاشة
+      </p>
     </div>
   </section>
 
@@ -194,4 +217,3 @@
 
 </body>
 </html>
-
