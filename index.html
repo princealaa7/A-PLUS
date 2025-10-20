@@ -36,6 +36,14 @@
       transform: translateY(-3px);
       box-shadow: 0 10px 25px rgba(16,185,129,0.5);
     }
+    .discount-btn {
+      background: linear-gradient(90deg, #f59e0b, #eab308);
+      transition: 0.3s ease;
+    }
+    .discount-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(245,158,11,0.5);
+    }
     .card {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
@@ -46,6 +54,29 @@
     .card:hover {
       background: rgba(255,255,255,0.08);
       transform: translateY(-8px);
+    }
+    .discount-card {
+      background: rgba(245,158,11,0.1);
+      border: 2px solid rgba(245,158,11,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .discount-badge {
+      position: absolute;
+      top: 20px;
+      left: -30px;
+      background: #10b981;
+      color: white;
+      padding: 5px 40px;
+      transform: rotate(-45deg);
+      font-weight: bold;
+      font-size: 0.8rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .original-price {
+      text-decoration: line-through;
+      color: #94a3b8;
+      font-size: 1.5rem;
     }
     .download-info {
       background: rgba(255,255,255,0.03);
@@ -149,18 +180,28 @@
   <section id="pricing" class="bg-slate-900 py-20 px-6">
     <h3 class="text-4xl font-bold text-center mb-10">شراء الكود</h3>
     <p class="text-gray-400 text-center mb-8">الهدف الأساسي من هذا الموقع هو شراء الاشتراك</p>
-    <div class="max-w-md mx-auto card text-center">
-      <span class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">اشتراك سنوي</span>
-      <p class="text-5xl font-extrabold gradient-text my-6">120,000 IQD</p>
-      <ul class="text-gray-300 space-y-3 mb-8">
-        <li><i class="fas fa-check-circle text-green-400 ml-2"></i> وصول كامل لجميع الدروس</li>
-        <li><i class="fas fa-check-circle text-green-400 ml-2"></i> دعم مباشر من الأستاذ</li>
-        <li><i class="fas fa-check-circle text-green-400 ml-2"></i> اختبارات وتصحيح تلقائي</li>
-        <li><i class="fas fa-check-circle text-green-400 ml-2"></i> شهادة إكمال</li>
-      </ul>
-      <a href="https://wa.me/+9647879666830" target="_blank" class="gradient-btn w-full inline-block py-4 rounded-xl font-bold text-lg">
-        <i class="fas fa-shopping-cart ml-2"></i> اشتري الكود عبر واتساب
-      </a>
+    
+    <div class="max-w-2xl mx-auto">
+      <!-- العرض الترويجي -->
+      <div class="card discount-card">
+        <div class="discount-badge">عرض خاص</div>
+        <span class="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold">العرض المميز</span>
+        <div class="my-6">
+          <p class="original-price">150,000 IQD</p>
+          <p class="text-5xl font-extrabold gradient-text">100,000 <span class="text-2xl">IQD</span></p>
+          <p class="text-green-400 mt-2"><i class="fas fa-tag ml-1"></i> وفر 50,000 دينار</p>
+        </div>
+        <ul class="text-gray-300 space-y-3 mb-8">
+          <li><i class="fas fa-check-circle text-green-400 ml-2"></i> وصول كامل لجميع الدروس</li>
+          <li><i class="fas fa-check-circle text-green-400 ml-2"></i> دعم مباشر من الأستاذ</li>
+          <li><i class="fas fa-check-circle text-green-400 ml-2"></i> اختبارات وتصحيح تلقائي</li>
+          <li><i class="fas fa-check-circle text-green-400 ml-2"></i> شهادة إكمال</li>
+          <li><i class="fas fa-check-circle text-green-400 ml-2"></i> اشتراك سنوي كامل</li>
+        </ul>
+        <a href="https://wa.me/+9647879666830" target="_blank" class="discount-btn w-full inline-block py-4 rounded-xl font-bold text-lg text-center">
+          <i class="fas fa-bolt ml-2"></i> احصل على العرض المميز
+        </a>
+      </div>
     </div>
   </section>
 
@@ -200,7 +241,7 @@
         <div class="bg-slate-800 p-4 rounded-lg">
           <i class="fas fa-calendar-alt text-yellow-400 text-2xl mb-2"></i>
           <p class="font-bold">آخر تحديث</p>
-          <p class="text-gray-300">20 اكتوبر 2025</p>
+          <p class="text-gray-300">20 أكتوبر 2025</p>
         </div>
       </div>
     </div>
